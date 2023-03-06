@@ -28,9 +28,3 @@ class Model(nn.Module):
         output = output.last_hidden_state
         output = mean_pooling(output)
         return output
-
-# model = BartEncoder.from_pretrained('facebook/bart-large')
-# input = "We can do it ."
-# tokenizer = BartTokenizer.from_pretrained('facebook/bart-large')
-# encode_input = tokenizer(input, return_tensors='pt', max_length = 64, padding='max_length', truncation=True)
-# print(model(**encode_input).last_hidden_state.shape)
