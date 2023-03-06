@@ -236,10 +236,7 @@ def evaluation(training_path, eva, modelpth):
                         encode_input = tokenizer(sen, return_tensors='pt')
                         encode_output = encoder(**encode_input)
                         data = torch.cat((data, encode_output), 0)
-                        # if i % 100 == 0:
-                        #     print(data.shape)
             torch.save(data, 'dd_eva_bart_valid.pth')
-            # print("111111111111111111111111")
             test = data
         test = torch.load(modelpth)
         test = test.unsqueeze(dim=0)
@@ -281,12 +278,3 @@ def inference_cluster(sentence, order):
     elif order == "center":
         id = find_nearest_id(policy, cluster_center).item()
         return cluster_center[id]
-
-# if __name__ == '__main__':
-    # train()
-    # cluster_id = evaluation('valid/valid_data2.txt', False, "dd_eva_bart_valid.pth")
-    # tokenizer = BartTokenizer.from_pretrained('facebook/bart-large')
-    # sentence = "I Love you ."
-    # x =tokenizer(sentence, return_tensors='pt')
-    # y=inference_cluster(x,"action")
-    # print(y.shape)
