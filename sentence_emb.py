@@ -211,17 +211,7 @@ def train(args):
 def main():
     args = parse_args()
     train(args)
-    # dl, dll = read_data(args)
-    # for data,da in tqdm(zip(dl, dll)):
-    #     print(data,da)
-        # print(data[10])
-    #     # if data[10] == '<eod>\n':
-    #     #     print(3333333333)
-    #     # break
-    #     y_true = strong_relativity_loss(data, args)
-    #     print(y_true)
-    #     print(data)
-    #     break
+
 
 if __name__ == "__main__":
     main()
