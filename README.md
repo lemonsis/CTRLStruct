@@ -1,2 +1,2 @@
 # CTRLStruct
-Code for paper CTRLStruct: Dialogue Structure Learning for Open-Domain Response Generation
+Code for WWW 2023 paper CTRLStruct: Dialogue Structure Learning for Open-Domain Response Generation
